@@ -21,6 +21,7 @@ async function bootstrap() {
   await connectDatabase();
 
   const app = express();
+  app.set("trust proxy", 1);
   app.disable("x-powered-by");
   app.use(helmet());
   app.use(cors({ origin: CLIENT_ORIGINS, credentials: false }));
