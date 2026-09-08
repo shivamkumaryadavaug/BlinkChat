@@ -58,6 +58,7 @@ jobs:
           fi
           
       - name: Fix Kotlin stdlib version conflict
+        working-directory: frontend
         run: |
           cat >> android/build.gradle << 'EOF'
 
