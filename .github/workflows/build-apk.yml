@@ -59,7 +59,7 @@ jobs:
           
       - name: Fix Kotlin stdlib version conflict
         run: |
-          cat >> android/build.gradle << 'EOF'
+          cat >> frontend/android/build.gradle << 'EOF'
 
           allprojects {
               configurations.all {
